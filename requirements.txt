@@ -1,0 +1,5 @@
+# Pip-only installs: `pip install -r requirements.txt` then `pip install -e .`
+# Prefer: https://docs.astral.sh/uv/ — `uv sync` (see README.md).
+
+PyYAML>=6.0
+rich>=13.0

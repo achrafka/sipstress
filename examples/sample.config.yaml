@@ -1,0 +1,17 @@
+# Optional --config reference (all keys optional except director + number/to)
+director: "YOUR_SBC"
+number: "YOUR_CALLEE"
+# OpenSIPS-style outbound hint (exact token comes from your interconnect docs):
+# provider: "YOUR_CARRIER_TAG"
+# Approved caller identity — match trunk / carrier docs:
+# from: "sip:cliuser@trunk.example.com"
+# pai: "cliuser@sbc.example.com"
+# Full Request-URI when the director requires Tel / user=phone style routing:
+# to: "sip:+e164-user@YOUR_SBC;user=phone"
+# Stereo WAV (L=in R=out) + live mic RTP — install audio extra; Python 3.13+ → audioop-lts
+# record_duplex_wav: true
+# record_microphone: true
+# inbound_record_gain softens far-end level on disk only (try 0.5–0.65 if pickup is too loud)
+# inbound_record_gain: 0.58
+duration: 120s
+codec: pcmu
