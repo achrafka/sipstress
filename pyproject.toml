@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sipstress"
+version = "0.1.0"
+description = "SIP load-testing and benchmarking framework (SIPp-like, in pure Python)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "achref" }]
+dependencies = [
+    "PyYAML>=6.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+viz = ["plotly>=5.18"]
+pdf = [
+    "playwright>=1.40",
+]
+audio = [
+    "sounddevice>=0.4.6",
+    "numpy>=1.20",
+]
+
+[project.scripts]
+sipstress = "sipstress.cli:main"
+sipstress-html2pdf = "sipstress.reports.html_to_pdf:main"
+
+[tool.setuptools.packages.find]
+include = ["sipstress*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0",
+]

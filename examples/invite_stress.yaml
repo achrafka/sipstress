@@ -1,0 +1,24 @@
+# INVITE stress test against two directors with media, ramp-up + ramp-down.
+director:
+  - label: a
+    uri: sip:director-a.example.com:5060
+  - label: b
+    uri: sip:director-b.example.com:5060
+scenario: invite_media
+to: "sip:callee-test@{director_host}"
+from: "sip:tester@sipstress.local"
+calls: 2000
+cps: 25
+concurrent: 100
+ramp_up: 10s
+ramp_down: 10s
+call_duration: 30s
+media: true
+codec: pcmu
+rtp_port_range: 40000-42000
+bind_port: 5070
+auth: "tester:secret"
+json_out: invite_stress.json
+summary_out: invite_stress.txt
+log_level: INFO
+log_file: invite_stress.log
