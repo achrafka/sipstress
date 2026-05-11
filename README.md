@@ -191,12 +191,6 @@ uv run pytest
 
 ---
 
-## License
-
-MIT.
-
----
-
 ## Contributing
 
 Issues and PRs welcome. Keep changes focused; match existing style; run **`uv run pytest`** (or **`pytest`** in your venv) before submitting.
