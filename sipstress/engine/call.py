@@ -18,7 +18,7 @@ import logging
 import secrets
 import time
 from dataclasses import dataclass, field
-from typing import Awaitable, Callable, Dict, List, Optional, Tuple
+from typing import Callable, Dict, List, Optional, Tuple
 
 from ..sip import auth as sip_auth
 from ..sip import sdp as sip_sdp
@@ -26,7 +26,6 @@ from ..sip.message import (
     CRLF,
     SipMessage,
     build_request,
-    build_response,
     parse_uri_host_port,
 )
 from ..sip.transport import SipTransport

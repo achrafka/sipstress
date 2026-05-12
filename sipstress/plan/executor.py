@@ -9,7 +9,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import time
-from typing import Awaitable, Callable, List, Optional
+from typing import Callable, List, Optional
 
 from ..media.rtp import RtpStream
 from .spec import StepResult, StepSpec, StepType, StepVerdict, TestPlan

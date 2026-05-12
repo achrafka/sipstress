@@ -1,8 +1,6 @@
 """OPTIONS keep-alive / health-probe scenario."""
 from __future__ import annotations
 
-import time
-
 from ..engine.call import CallContext
 from .library import register
 

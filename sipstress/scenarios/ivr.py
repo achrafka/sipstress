@@ -26,7 +26,7 @@ import time
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 
-from ..engine.call import CallContext, IvrStep
+from ..engine.call import CallContext
 from ..media.rtp import RtpStream
 from ..plan.executor import PlanExecutor
 from ..plan.spec import StepResult, StepVerdict, TestPlan

@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import hashlib
-import os
 import re
 import secrets
 from typing import Dict, Optional

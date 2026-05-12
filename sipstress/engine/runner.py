@@ -15,10 +15,9 @@ import logging
 import random
 import time
 from dataclasses import dataclass, field
-from typing import Awaitable, Callable, Dict, List, Optional, Tuple
+from typing import Callable, Dict, List, Optional
 
 from ..scenarios.library import get as get_scenario
-from ..sip.message import parse_uri_host_port
 from ..sip.transport import SipTransport
 from .call import CallConfig, CallContext, DirectorTarget, IvrStep
 from .metrics import Metrics
